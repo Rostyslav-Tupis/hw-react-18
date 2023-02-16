@@ -1,0 +1,66 @@
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.showTime{
+    font-size: 24px;
+}
+.btns{
+    display: flex;
+    column-gap: 15px ;
+}
+button{
+    padding: 6px 20px;
+}
+
+.wrapper{
+    padding: 3px;
+    border: 1px solid black;
+    width: 860px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.timeLine{
+    height: 50px;
+    background-color: aqua;
+    animation: line 30s
+
+}
+/* 
+@keyframes line {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+} */
+/* == Enter animation == */
+ 
+/*.timeLine-enter {
+    width: 0%;
+}
+.timeLine-enter-active {
+    width: 100%;
+    transition: width 30s;
+}
+
+.timeLine-enter-done {
+    width: 100%;
+} */
+/* == Exit animation == */
+/* .timeLine-exit {
+    width: 100%;
+}
+.timeLine-exit-active {
+    width: 0%;
+    transition: width 30s;
+}
+
+.timeLine-exit-done {
+    width: 0%;
+} */
