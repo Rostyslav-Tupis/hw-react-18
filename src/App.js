@@ -1,6 +1,5 @@
 import Timer from './timer component/timer'
 
-
 function App() {
   
   return (

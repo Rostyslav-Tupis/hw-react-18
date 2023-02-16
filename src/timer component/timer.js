@@ -1,6 +1,4 @@
-import React , {useState, useEffect} from "react";
-// import { Transition , CSSTransition } from "react-transition-group"; невдавала спроба зробити анімацію
-
+import React , {useState, useEffect } from "react";
 import './style.css'
 
 function Timer({step , timerTime, autoStart}){
@@ -16,7 +14,6 @@ function Timer({step , timerTime, autoStart}){
         if(isRunning && time > 0 ){
 
             console.log(`${formatTime(time)} Часу залишилося`);
-
             interval = setInterval(()=>{
                 setTime((prev)=> {
                     return prev - 1 
@@ -27,19 +24,15 @@ function Timer({step , timerTime, autoStart}){
         else{
             clearInterval(interval)
         }
-
         if(time === 0){
             setStatusBtn(false)
         }
-
         return() => clearInterval(interval)
-    },[isRunning , time])
-
+    },[isRunning , time, step])
 
     function handleStatus(){
         setStatusBtn(!isRunning)
     }
-
 
     useEffect(()=>{
         if(isRunning && time > 0){
@@ -49,6 +42,7 @@ function Timer({step , timerTime, autoStart}){
         }else{
             console.log("Таймер на паузі");
         }
+        // eslint-disable-next-line
     },[isRunning])
 
     function handleReset(){
@@ -66,15 +60,6 @@ function Timer({step , timerTime, autoStart}){
                     <button onClick={handleReset}>Reset to 0</button>
                 </div>
             </div>
-            {/* <div className="wrapper">
-                <CSSTransition
-                    in={!isRunning}
-                    timeout={30}
-                    classNames="timeLine"
-                >
-                    <div className="timeLine"></div>
-                </CSSTransition>
-            </div> */}
         </div>
     )
 }
