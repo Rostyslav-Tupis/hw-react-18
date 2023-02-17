@@ -15,23 +15,21 @@
 button{
     padding: 6px 20px;
 }
-
 .wrapper{
-    padding: 3px;
+    margin-top: 10px;
+    width: 800px;
     border: 1px solid black;
-    width: 860px;
-    margin: 0 auto;
-    overflow: hidden;
+    padding: 5px;
 }
 
 .timeLine{
     height: 50px;
     background-color: aqua;
-    animation: line 30s
-
+    transition: all ;
 }
-/* 
-@keyframes line {
+
+/* @keyframes line {
+
     0%{
         width: 100%;
     }
