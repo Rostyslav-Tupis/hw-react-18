@@ -46,7 +46,7 @@ function Timer({step , timerTime, autoStart}){
     },[isRunning])
 
     function handleReset(){
-        setTime(0)
+        setTime(timerTime)
     }
 
     return(
@@ -57,7 +57,7 @@ function Timer({step , timerTime, autoStart}){
                     <button onClick={handleStatus}>
                         {isRunning ? "Stop" : "Start"}
                     </button>
-                    <button onClick={handleReset}>Reset to 0</button>
+                    <button onClick={handleReset}>Reset</button>
                 </div>
             </div>
         </div>
